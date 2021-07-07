@@ -15,13 +15,13 @@ const AvailableMeals = () => {
 
       const fetchMeals = async () => {
         let loadedMeals = [];
-          const response = await fetch("https://food-app-2e8a8-default-rtdb.firebaseio.com/meals.json");
-
+          const response = await fetch("https://food-59d0e-default-rtdb.firebaseio.com/meals.json");
+          const responseData = await response.json();
           if(!response.ok) {
             throw new Error("Something went wrong...");
           }
 
-          const responseData = await response.json();
+         
 
           for(let key in responseData) {
             loadedMeals.push({id: key, name: responseData[key].name, description: responseData[key].description, price: responseData[key].price})

@@ -43,7 +43,7 @@ const Cart = ({hideCart}) => {
 
        setIsSubmitting(true);
 
-       await fetch("https://food-app-2e8a8-default-rtdb.firebaseio.com/orders.json",{
+       await fetch("https://food-59d0e-default-rtdb.firebaseio.com/orders.json",{
             method:"POST",
             "Content-Type":"application/json",
             body: JSON.stringify(orderObject)
