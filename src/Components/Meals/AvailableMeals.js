@@ -18,9 +18,7 @@ const AvailableMeals = () => {
           const response = await fetch("https://food-59d0e-default-rtdb.firebaseio.com/meals.json");
           const responseData = await response.json();
         
-          if(!response.ok) {
-            throw new Error("Something went wrong...");
-          }
+        
 
           for(let key in responseData) {
             loadedMeals.push({id: key, name: responseData[key].name, description: responseData[key].description, price: responseData[key].price})
